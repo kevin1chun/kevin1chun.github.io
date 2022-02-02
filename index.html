@@ -28,20 +28,19 @@ Casa de K.Chun
 <body>
     
     <h1>Fill out the form below.</h1>
-    <label>Original Weight for Your Portion:
+    <label for="originalYourWeight">Original Weight for Your Portion (in grams)
       <input id="originalYourWeight" type="number" oninput="calsPerDay()" value="0">
       grams
     </label>
-    <label>Original Total Weight:
-      <input id="originalTotalWeight" type="number" oninput="calsPerDay()" value="0">
+    <label for="originalTotalWeight">Original Total Weight (in grams)
+      <input id="originalTotalWeight" type="number" oninput="calsPerDay() class="form-control" aria-describedby="originalTotalWeightHelp" value="0">
       grams
     </label>
-    <label>New Total Weight:
-      <input id="newTotalWeight" type="number" oninput="calsPerDay()" value="0">
-      grams
+    <label for="newTotalWeight">New Total Weight (in grams)
+      <input id="newTotalWeight" type="number" oninput="calsPerDay()" class="form-control" aria-describedby="newTotalWeightHelp" value="0">
     </label>
     <label>
-      New Weight for Your Portion: <span id="newYourWeightGrams"></span> grams
+      New Weight for Your Portion (in grams): <span id="newYourWeightGrams"></span>
     </label>
     
     
