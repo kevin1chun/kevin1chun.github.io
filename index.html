@@ -1,8 +1,62 @@
+<head>
+    <style>
+    label {
+      display: block;
+      box-shadow: 0.1em 0.1em 0.2em #888;
+      margin: 1em;
+      border-radius: 1ex;
+      padding: 1ex 1em;
+    }
+    input[type=number] {
+      text-align: right;
+      border: none;
+    }
+    input {
+      float: right;
+    }
+    span {
+      font-weight: bold;
+      text-align: right;
+    }
+    </style>
+    <script>
+    function calsPerDay() {
+      function find(id) { return document.getElementById(id) }
+
+      var originalYourWeight = find("originalYourWeight").value
+      var originalTotalWeight = find("originalTotalWeight").value
+      var newTotalWeight = find("newTotalWeight").value
+      
+      var result = (originalYourWeight / originalTotalWeight) * newTotalWeight
+      find("newYourWeightGrams").innerHTML = Math.round( result )
+    }
+
+    </script>
+</head>
+
 <html>
 <title>
 Casa de K.Chun
 </title>
 <body>
-    <h1> hi JESSICA AN </h1>
+    <h1>Fill out the form below.</h1>
+    <label>Original Weight for Your Portion:
+      <input id="originalYourWeight" type="number" oninput="calsPerDay()" value="0">
+      grams
+    </label>
+    <label>Original Total Weight:
+      <input id="originalTotalWeight" type="number" oninput="calsPerDay()" value="0">
+      grams
+    </label>
+    <label>New Total Weight:
+      <input id="newTotalWeight" type="number" oninput="calsPerDay()" value="0">
+      grams
+    </label>
+    <label>
+      New Weight for Your Portion: <span id="newYourWeightGrams"></span> grams
+    </label>
 </body>
+    
+    
+
 </html>
